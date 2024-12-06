@@ -1,0 +1,1 @@
+SELECT DISTINCT dept FROM employees; -- shows distinct depts not repeat

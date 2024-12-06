@@ -1,0 +1,1 @@
+SELECT * FROM database WHERE salary BETWEEN 5000 and 6000;

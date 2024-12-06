@@ -1,0 +1,1 @@
+SELECT * FROM database LIMIT 3; -- will show data of top 3 column of the table
