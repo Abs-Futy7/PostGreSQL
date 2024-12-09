@@ -1,0 +1,26 @@
+We can use view in postgre to view a big project
+For example,
+
+
+CREATE VIEW billing AS
+SELECT
+    c.cust_name,
+    o.ord_date,
+    p.p_name,
+    p.price,
+    oi.quantity,
+    (oi.quantity*p.price) AS total_price
+        FROM order_items oi
+        JOIN
+            products p ON oi.p_id=p.p_id
+        JOIN
+            orders o ON o.ord_id=oi.ord_id
+        JOIN
+            customers c ON o.cust_id=c.cust_id;
+
+
+
+SELECT * FROM billing;
+
+Now we can use this view in any query
+Here we have stored the query, not the data

@@ -1,0 +1,6 @@
+SELECT p_name, SUM(total_price) FROM
+billing_info
+    GROUP BY p_name
+    HAVING SUM(total_price) > 1000;
+
+Here, we have to use "HAVING" instead of "WHERE" if we use "GROUP BY"
